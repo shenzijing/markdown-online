@@ -5,7 +5,7 @@ const DOMAIN = 'https://markdownonline.app';
 const LOCALES = ['en', 'es', 'zh'];
 const DEFAULT_LOCALE = 'en';
 const LOCALE_DIR = path.join(__dirname, '..', 'src', 'app', '[locale]');
-const OUTPUT = path.join(__dirname, '..', 'public', 'sitemap.xml');
+const OUTPUT = path.join(__dirname, '..', 'out', 'sitemap.xml');
 
 function discoverRoutes(dir, prefix = '') {
   const routes = [];

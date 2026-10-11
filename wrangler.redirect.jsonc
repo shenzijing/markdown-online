@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "markdown-online-www",
+  "compatibility_date": "2026-06-10",
+  "assets": {
+    "directory": "./redirect-assets",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    {
+      "pattern": "www.markdownonline.app",
+      "custom_domain": true
+    }
+  ]
+}

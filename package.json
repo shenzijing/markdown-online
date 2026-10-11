@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/generate-sitemap.js && node scripts/copy-default-locale.js",
+    "build": "next build && node scripts/generate-sitemap.js && node scripts/copy-default-locale.js && node scripts/verify-static.js",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "npm run build && wrangler deploy --config wrangler.jsonc && wrangler deploy --config wrangler.redirect.jsonc"
   },
   "dependencies": {
     "@swc/helpers": "^0.5.19",
@@ -32,7 +33,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "4.146.0"
   },
   "engines": {
     "node": ">=18"
